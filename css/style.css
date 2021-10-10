@@ -1,0 +1,300 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #621402;
+  color: white;
+  font-family: 'Roboto', sans-serif;
+  font-style: normal;
+  font-weight: normal;
+
+}
+
+.container {
+  max-width: 1170px;
+  /*ширина контенар из макета*/
+  margin: 0 auto;
+  /*центурем*/
+}
+
+h1,
+p {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+.header {
+  background-image: linear-gradient(180deg, rgba(98, 20, 2, 0.31) 0%, #621402 85.62%), url("../img/bg.jpg");
+  min-height: 100vh;
+  /* чтобы картинка была на всю высоту бразуера, иначе кратинка будет только на header*/
+  background-repeat: no-repeat;
+  background-position: center top;
+  /*прикрепиться  к верху  и по центру*/
+  background-size: cover;
+  /*займет все свободное место, с уменьшением браузера катрника тож будет уменьшаться*/
+
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.menu {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  padding-left: 57px;
+}
+
+
+.menu__item {
+  margin-right: 25px;
+}
+
+.menu__link {
+  /*a*/
+  color: white;
+  text-decoration: none;
+}
+
+.user {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+  /*флек сэлемент улеитит вправо*/
+  color: white;
+}
+
+.user__avatar {
+  /* display: block; */
+  width: 33px;
+  height: 33px;
+  margin-left: 11px;
+  border-radius: 50%;
+
+}
+
+.film {
+  display: flex;
+  align-items: center;
+  margin-top: 60px;
+  margin-bottom: 62px;
+}
+
+.film__title-small {
+  font-size: 24px;
+  line-height: 150%;
+  opacity: 0.5;
+  margin-bottom: 11px;
+}
+
+.film__title {
+  margin-bottom: 23px;
+  font-weight: bold;
+  font-size: 36px;
+  line-height: 42px;
+}
+
+.film__description {
+  max-width: 570px;
+  font-size: 16px;
+  line-height: 150%;
+  margin-bottom: 50px;
+}
+
+.film__detailes {
+  display: flex;
+  align-items: center;
+}
+
+.film__trailer {
+  margin: auto;
+  /*кнпока по центур располдится*/
+}
+
+.time {
+  display: flex;
+  align-items: center;
+}
+
+.time__icon {
+  margin-right: 15px;
+}
+
+.rating {
+  display: flex;
+  align-items: center;
+  margin-left: 34px;
+}
+
+.rating__icon {
+  margin-right: 15px;
+}
+
+.rating__current {
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 150%;
+}
+
+.session {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding-top: 46px;
+  padding-bottom: 63px;
+  border-top: 1px solid rgba(255, 255, 255, 0.5);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+  margin-bottom: 63px;
+}
+
+.session__label {
+  display: block;
+  margin-bottom: 20px;
+}
+
+.session__date-block {
+  display: flex;
+
+}
+
+.session__date-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 12px 28px;
+  margin-right: 14px;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 5px;
+  transition: background-color 0.2s;
+  /*цвет будет меняться через 0.2с*/
+}
+
+
+.session__date-item:hover,
+.session__date-item:active {
+  background-color: rgba(254, 142, 5, 1);
+  color: rgba(98, 20, 2, 1);
+}
+
+.session__month {
+  font-size: 16px;
+  line-height: 19px;
+}
+
+.session__day {
+  font-weight: 900;
+  font-size: 30px;
+  line-height: 35px;
+}
+
+.session__week {
+  font-size: 19px;
+  line-height: 22px;
+}
+
+.select {
+  padding: 18px;
+  color: #fff;
+  background: rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 5px;
+}
+
+.select-cinema {
+  min-width: 470px;
+}
+
+.scheme {
+  margin-bottom: 40px;
+  background: rgba(36, 36, 36, 0.18);
+  border-radius: 10px;
+}
+
+
+.scheme path:not(.light) {
+  /*кроме класса light*/
+  fill: rgba(255, 255, 255, 0.2);
+  cursor: pointer;
+}
+
+.scheme path:not(.light):hover {
+  /*кроме класса light, при навдении*/
+  fill: rgba(255, 255, 255, 0.5);
+}
+
+.scheme path.booked,
+.scheme path.booked:hover {
+  fill: rgba(255, 255, 255, 0.05);
+  cursor: not-allowed;
+}
+
+
+.scheme path.active,
+.scheme path.active:hover {
+  fill: #fe8e05;
+
+}
+
+.legend {
+  display: flex;
+  align-items: center;
+  max-width: 1024px;
+  padding: 20px;
+  padding-left: 0;
+  margin: 0 auto;
+  border-top: 1px solid rgba(255, 255, 255, 0.5);
+
+}
+
+.legend__label {
+  display: flex;
+  align-items: center;
+  margin-right: 30px;
+  color: rgba(255, 255, 255, 0.15)
+}
+
+.legend svg {
+  margin-right: 15px;
+}
+
+
+.price {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding-bottom: 40px;
+}
+
+
+.price__label {
+  display: block;
+  font-size: 18px;
+  line-height: 21px;
+}
+
+.price__total,
+.price__ruble {
+  font-size: 52px;
+  line-height: 61px;
+}
+
+
+.button {
+  background: #FE8E05;
+  border-radius: 5px;
+  padding: 24px 52px;
+  color: white;
+}
