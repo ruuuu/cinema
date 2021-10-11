@@ -13,9 +13,10 @@ body {
 
 .container {
   max-width: 1170px;
-  /*ширина контенар из макета*/
+  /*ширина контента из макета*/
   margin: 0 auto;
-  /*центурем*/
+  /*центруем*/
+  width: 90%;
 }
 
 h1,
@@ -30,7 +31,7 @@ a {
 
 .header {
   background-image: linear-gradient(180deg, rgba(98, 20, 2, 0.31) 0%, #621402 85.62%), url("../img/bg.jpg");
-  min-height: 100vh;
+  /* min-height: 100vh; */
   /* чтобы картинка была на всю высоту бразуера, иначе кратинка будет только на header*/
   background-repeat: no-repeat;
   background-position: center top;
@@ -47,6 +48,10 @@ a {
   padding-bottom: 30px;
 }
 
+.nav {
+  position: relative;
+}
+
 .menu {
   display: flex;
   list-style: none;
@@ -54,6 +59,12 @@ a {
   padding: 0;
   padding-left: 57px;
 }
+
+.m-menu {
+  display: none;
+}
+
+
 
 
 .menu__item {
@@ -213,13 +224,20 @@ a {
 }
 
 .select-cinema {
-  min-width: 470px;
+  width: 470px;
 }
 
 .scheme {
   margin-bottom: 40px;
   background: rgba(36, 36, 36, 0.18);
   border-radius: 10px;
+  /*overflow-x: auto; /*если контенет не юудет вмщаться, то появится гор скролл*/
+}
+
+.scheme__svg {
+  max-width: 1170px;
+  /*ширина контента на макете*/
+
 }
 
 
@@ -251,6 +269,8 @@ a {
   display: flex;
   align-items: center;
   max-width: 1024px;
+  /*с учетом паддинга*/
+  width: 90%;
   padding: 20px;
   padding-left: 0;
   margin: 0 auto;
@@ -298,3 +318,123 @@ a {
   padding: 24px 52px;
   color: white;
 }
+
+@media (max-width: 1200px) {
+  /*<1200*/
+
+  .container {
+    max-width: 960px;
+  }
+
+  .select-cinema {
+    width: 100%;
+  }
+}
+
+
+@media (max-width: 992px) {
+  /*<992*/
+
+  .container {
+    max-width: 550px;
+  }
+
+  .menu__item {
+    margin-right: 20px;
+  }
+
+  .session {
+    /*флекс контенер*/
+    flex-wrap: wrap;
+    /*флекс элементы можно переносить, если они не помещаются*/
+  }
+
+  .session__date {
+    flex-basis: 70%;
+    /*те знаимает всю строку*/
+    margin-bottom: 40px;
+  }
+
+  .session__time {
+    /*флекс эемент*/
+    order: 2;
+  }
+
+  .session__cinema {
+    /*флекс эемент*/
+    order: 3;
+
+  }
+
+
+}
+
+
+@media (max-width: 768px) {
+  /*<768*/
+
+  .container {
+    max-width: 560px;
+  }
+
+  .menu {
+
+    position: absolute;
+    left: 0;
+    top: 40px;
+    flex-direction: column;
+    padding: 20px;
+    margin-left: 20px;
+    background-color: #621402;
+    z-index: 9;
+    border-radius: 10px;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateX(-100%);
+    /*подняли меню вврех*/
+    transition: opacity 0.2s, transform 0.2s;
+    /*прозрачнть будет менятся за 0.2s*/
+  }
+
+  .m-menu {
+    display: block;
+    width: 40px;
+    height: 40px;
+    margin-left: 10px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+  }
+
+  .menu__item:not(:last-child) {
+    /*всем кроме послднего*/
+    margin-bottom: 20px;
+  }
+
+  .is-open {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(0);
+  }
+
+
+  .film__description {
+    margin-right: 30px;
+  }
+
+  .film {
+    flex-direction: column;
+  }
+
+  .film__trailer {
+    /*флекс элемент*/
+    margin-right: auto;
+    /* margin-left: 0; */
+    margin-top: 40px;
+  }
+
+
+}
+
+
+/*fancyapps.com/fancybox/3 - плагин для всплываюзих оконои сладйерв*/

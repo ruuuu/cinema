@@ -1,5 +1,8 @@
 const schemeSvg = document.querySelector('.scheme__svg'); // места
 const totalPriceTag = document.querySelector('.price__total');
+const menuButton = document.querySelector('.m-menu'); // бургер
+const menu = document.querySelector('.menu');
+
 
 let cost = 880;
 
@@ -17,4 +20,12 @@ schemeSvg.addEventListener('click', (evt) => {
 });
 
 
+
+menuButton.addEventListener('click', () => {
+
+  // menu.style.display = 'block';
+
+  menu.classList.toggle('is-open');
+
+});
 

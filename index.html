@@ -10,7 +10,9 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./css/normalize.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.css" />
   <link rel="stylesheet" href="./css/style.css">
+
 </head>
 
 <body>
@@ -20,6 +22,14 @@
         <img src="./img/logo.svg" width="30" height="30" alt="logo">
       </a>
       <nav class="nav">
+        <button class="m-menu">
+          <!--кнпока  бургер для мобилок-->
+          <svg width="15" height="19" viewBox="0 0 15 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <line y1="0.5" x2="15" y2="0.5" stroke="white" />
+            <line y1="4.5" x2="15" y2="4.5" stroke="white" />
+            <line y1="8.5" x2="15" y2="8.5" stroke="white" />
+          </svg>
+        </button>
         <ul class="menu">
           <li class="menu__item">
             <a href="#" class="menu__link">Главная</a>
@@ -69,7 +79,8 @@
           </div>
         </div>
       </div>
-      <a href="" class="film__trailer">
+      <a href="" data-fancybox="video-gallery" data-src="https://www.youtube.com/watch?v=z2X2HaTvkl8"
+        class="film__trailer">
         <!--кнпока плей-->
         <svg width="100" height="100" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
           <circle cx="50" cy="50" r="50" fill="white" />
@@ -140,8 +151,7 @@
   </header>
 
   <div class="scheme container">
-    <svg class="scheme__svg" width="1170" height="686" viewBox="0 0 1170 686" fill="none"
-      xmlns="http://www.w3.org/2000/svg">
+    <svg class="scheme__svg" viewBox="0 0 1170 686" fill="none" xmlns="http://www.w3.org/2000/svg">
       <path class="light" d="M128 115L201.04 48H968.96L1042 115H128Z" fill="url(#paint0_linear)" />
       <line x1="76" y1="43" x2="1094" y2="43" stroke="black" stroke-opacity="0.39" stroke-width="10" />
       <path class="booked"
@@ -500,6 +510,7 @@
     </div>
     <a href="№" class="button button-pay">Перейти к оплате</a>
   </div>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js"></script>
   <script src="./js/scripts.js"></script>
 </body>
 
